@@ -16,8 +16,17 @@ function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
     return employee;
     
 }
-// TEST FOUR
+// TEST FOUR & FIVE
+
+// function destructivelyDeleteFromEmployeeByKey(employee, key, value){
+//     delete employee[key];
+//     return employee;
+// }
+function deleteFromEmployeeByKey(employee, key, value) {
+    return Object.assign({}, employee, { [key]: value });
+}
+
 function destructivelyDeleteFromEmployeeByKey(employee, key, value) {
     delete employee[key];
     return employee;
-};
+}
